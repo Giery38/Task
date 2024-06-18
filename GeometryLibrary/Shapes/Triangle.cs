@@ -29,7 +29,13 @@
         }
         public bool IsRightTriangle() 
         {
-            return C*C == A*A + B*B;
+            if (C * C == A * A + B * B || 
+                A * A == C * C + B * B ||
+                B * B == C * C + A * A)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
